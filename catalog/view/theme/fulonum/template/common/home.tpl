@@ -1,5 +1,14 @@
 <?php echo $header; ?>
 <div class="container">
+
+    <?php if (!empty($anyname)){ ?>
+    <div class="row">
+        <div class="col-sm-12">
+            <?php echo $anyname;?>
+        </div>
+    </div>
+    <?php }?>
+
   <div class="row">
     <?php echo $column_left; ?>
 

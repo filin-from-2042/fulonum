@@ -544,15 +544,73 @@ footer h5 {
 }
 /* list group */
 .list-group a {
-	border: 1px solid #DDDDDD;
-	color: #888888;
-	padding: 8px 12px;
+	/*border: 1px solid #DDDDDD;*/
+	color: #797569;
+	padding: 8px 20px;
+    background-color: transparent;
+    line-height: 31px;
+    font-size: 14px;
+}
+.list-group li:last-child{
+    border: 0;
 }
 .list-group a.active, .list-group a.active:hover, .list-group a:hover {
-	color: #444444;
-	background: #eeeeee;
-	border: 1px solid #DDDDDD;
+	color: #6ea500;
+	/*border: 1px solid #DDDDDD;*/
 	text-shadow: 0 1px 0 #FFF;
+    background-color: transparent;
+}
+.list-group {
+    border: none;
+    box-sizing: border-box;
+}
+.list-group ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #fdf3d4;
+}
+.list-group ul.first-lvl > li{
+    position: relative;
+}
+.list-group ul.first-lvl>li:hover ul.second-lvl{
+    display: block;
+    width: 100%;
+    z-index: 100;
+}
+.list-group ul.second-lvl{
+    display: none;
+    left: 100%;
+    top: 0;
+    position: absolute;
+}
+.list-group .list-group-item:first-child{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.list-group .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.list-group .list-group-item{
+    border: 0;
+    margin-bottom: -1px;
+}
+.list-group li{
+    border: 0;
+    border-bottom: 1px solid #f0d4aa;
+}
+.list-group li i{
+    float: right;
+    line-height: 31px;
+    font-size: 21px;
+}
+.list-group .list-group-item.list-title,
+.list-group .list-group-item.list-title:hover{
+    background-color: #e56502;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: none;
 }
 /* carousel */
 .carousel-caption {
