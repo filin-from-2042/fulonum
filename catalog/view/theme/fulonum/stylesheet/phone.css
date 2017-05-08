@@ -1,0 +1,8 @@
+/*************************************** PHONES ***********************/
+@media (max-width: 767px) {
+    .product-list .product-thumb .caption {
+        min-height: 0;
+        margin-left: 0;
+        padding: 0 10px;
+    }
+}

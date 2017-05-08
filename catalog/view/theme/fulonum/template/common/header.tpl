@@ -23,6 +23,9 @@
 <link href="catalog/view/javascript/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 <link href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,300,700" rel="stylesheet" type="text/css" />
 <link href="catalog/view/theme/fulonum/stylesheet/stylesheet.css" rel="stylesheet">
+<link href="catalog/view/theme/fulonum/stylesheet/mobile.css" rel="stylesheet">
+<link href="catalog/view/theme/fulonum/stylesheet/phone.css" rel="stylesheet">
+<link href="catalog/view/theme/fulonum/stylesheet/tablet.css" rel="stylesheet">
 <?php foreach ($styles as $style) { ?>
 <link href="<?php echo $style['href']; ?>" type="text/css" rel="<?php echo $style['rel']; ?>" media="<?php echo $style['media']; ?>" />
 <?php } ?>
@@ -45,7 +48,7 @@
     <div id="top-links" class="nav">
       <ul class="list-inline">
         <li>
-            <a href="/">
+            <a href="/" title="<?php echo $text_home; ?>">
                 <span class="hidden-lg"><i class="fa fa-home"></i></span>
                 <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_home; ?></span>
             </a>
@@ -57,9 +60,9 @@
             </a>
         </li>
         <li>
-            <a href="<?php echo $contact; ?>">
+            <a href="<?php echo $contact; ?>" title="<?php echo $text_contacts ?>">
                 <span class="hidden-lg"><i class="fa fa-phone"></i></span>
-                <span class="hidden-xs hidden-sm hidden-md"><?php echo text_account; ?></span>
+                <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_contacts; ?></span>
             </a>
         </li>
         <li>
@@ -82,20 +85,20 @@
         </li>
           <?php if ($logged) { ?>
           <li>
-              <a href="<?php echo $logout; ?>">
+              <a href="<?php echo $logout; ?>" title="<?php echo $text_logout; ?>">
                   <span class="hidden-lg"><i class="fa fa-sign-out"></i></span>
                   <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_logout; ?></span>
               </a>
           </li>
           <?php } else { ?>
           <li>
-              <a href="<?php echo $login; ?>">
+              <a href="<?php echo $login; ?>" title="<?php echo $text_login; ?>">
                   <span class="hidden-lg"><i class="fa fa-sign-in"></i></span>
                   <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_login; ?></span>
               </a>
           </li>
           <li>
-              <a href="<?php echo $register; ?>">
+              <a href="<?php echo $register; ?>" title="<?php echo $text_register; ?>">
                   <span class="hidden-lg"><i class="fa fa-user-plus"></i></span>
                   <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_register; ?></span>
               </a>

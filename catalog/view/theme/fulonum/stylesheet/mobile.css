@@ -1,0 +1,6 @@
+/*************************************** MOBILE ***********************/
+@media (max-width: 1200px) {
+    #top-links .list-inline{
+        text-align: center;
+    }
+}
