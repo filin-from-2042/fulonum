@@ -15,3 +15,4 @@ $_['text_checkout']      = 'Оформление заказа';
 $_['text_search']        = 'Поиск';
 $_['text_all']           = 'Смотреть Все';
 $_['text_contacts']      = 'Контакты';
+$_['text_search']        = 'Поиск';
