@@ -168,6 +168,19 @@ div.required .control-label:before {
     cursor: pointer;
     border: none;
 }
+.owl-controls .owl-pagination{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: auto;
+    bottom: 15px;
+}
+.owl-controls div.owl-page span{
+    background:#fff;
+}
+.owl-controls div.owl-page.active span {
+    background: #008bc0;
+}
 /* cart */
 #cart {
 	margin-bottom: 20px;

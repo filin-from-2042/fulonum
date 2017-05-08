@@ -16,6 +16,10 @@ class ControllerCommonHome extends Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
+        if (!isset($this->request->get['route']) || (isset($this->request->get['route']) && $this->request->get['route'] == 'common/home')){
+            $data['anyname'] = $this->load->controller('extension/module/slideshow',array("banner_id"=>7,"width"=>1140,"height"=>380));
+        }
+
 		$this->response->setOutput($this->load->view('common/home', $data));
 	}
 }
