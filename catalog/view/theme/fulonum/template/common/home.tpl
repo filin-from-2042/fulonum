@@ -4,6 +4,8 @@
     <?php if (!empty($anyname)){ ?>
     <div class="row">
         <div class="col-sm-12">
+            <link href="catalog/view/javascript/jquery/owl-carousel/owl.carousel.css" rel="stylesheet">
+            <script src="catalog/view/javascript/jquery/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
             <?php echo $anyname;?>
         </div>
     </div>
