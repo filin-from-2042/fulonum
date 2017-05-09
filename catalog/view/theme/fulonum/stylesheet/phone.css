@@ -5,4 +5,18 @@
         margin-left: 0;
         padding: 0 10px;
     }
+    #logo {
+        margin: 0 0 0px 0;
+        text-align: center;
+    }
+    #logo a{
+        display: inline-block;
+    }
+
+    #search .input-lg {
+        max-width: 100%;
+    }
+    #cart > .btn {
+        text-align: center;
+    }
 }
