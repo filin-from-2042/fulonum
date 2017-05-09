@@ -1,4 +1,4 @@
-<h3 class="featured-title"><?php echo $heading_title; ?></h3>
+<h3 class="heading-panel-green"><?php echo $heading_title; ?></h3>
 <div class="row">
   <?php foreach ($products as $product) { ?>
 

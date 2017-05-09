@@ -10,7 +10,7 @@ $_['decimal_point']			= '.';
 $_['thousand_point']		= '';
 
 // Text
-$_['text_home']				= '<i class="fa fa-home"></i>';
+$_['text_home']				= 'Главная';
 $_['text_yes']					= 'Да';
 $_['text_no']					= 'Нет';
 $_['text_none']				= ' --- Не выбрано --- ';
@@ -71,3 +71,5 @@ $_['error_upload_999']		= 'Предупреждение: Неизвестная 
 $_['error_curl']				= 'CURL: Ошибка кода(%s): %s';
 
 
+
+$_['title_catalog'] = 'Каталог';

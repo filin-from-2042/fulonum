@@ -45,6 +45,10 @@ class ControllerProductCategory extends Controller {
 			'text' => $this->language->get('text_home'),
 			'href' => $this->url->link('common/home')
 		);
+        $data['breadcrumbs'][] = array(
+            'text' => $this->language->get('title_catalog'),
+            'href' => $this->url->link('product/category')
+        );
 
 		if (isset($this->request->get['path'])) {
 			$url = '';
@@ -157,10 +161,11 @@ class ControllerProductCategory extends Controller {
 					'filter_category_id'  => $result['category_id'],
 					'filter_sub_category' => true
 				);
-
-				$data['categories'][] = array(
+                $categoryImageSrc = (isset($result['image']) && !empty($result['image'])) ? $result['image'] : 'no_image.png';
+                $data['categories'][] = array(
 					'name' => $result['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-					'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url)
+					'href' => $this->url->link('product/category', 'path=' . $this->request->get['path'] . '_' . $result['category_id'] . $url),
+                    'image_src' => $this->model_tool_image->resize($categoryImageSrc, $this->config->get($this->config->get('config_theme') . '_image_category_width'), $this->config->get($this->config->get('config_theme') . '_image_category_height'))
 				);
 			}
 

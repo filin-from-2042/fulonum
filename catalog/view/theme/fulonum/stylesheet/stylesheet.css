@@ -1,7 +1,7 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
-	color: #666;
+	color: #868282;
 	font-size: 12px;
 	line-height: 20px;
 	width: 100%;
@@ -20,6 +20,15 @@ h1 {
 }
 h2 {
 	font-size: 27px;
+}
+h2.catalog-title {
+    border-bottom: 1px solid #dec58e;
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    color: #6ea500;
+    font-size: 17px;
+    font-weight: 600;
 }
 h3 {
 	font-size: 21px;
@@ -56,6 +65,44 @@ select.form-control, textarea.form-control, input[type="text"].form-control, inp
 .input-group .input-group-addon {
 	font-size: 12px;
 	height: 30px;
+    background: transparent;
+    border: 0;
+    padding-right: 7px;
+    color: #323232;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.input-group  #input-sort,
+.input-group  #input-limit{
+    border-radius: 0;
+    box-shadow: none;
+    color: #323232
+}
+.form-group #compare-total{
+    color: #323232;
+    font-size: 13px;
+    padding: 4px 12px;
+}
+#list-view,
+#grid-view{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 5px;
+}
+#list-view i,
+#grid-view i{
+    font-size: 28px;
+}
+.catalog-view-type-column{
+    text-align: right;
+}
+.catalog-delimiter{
+    border: 0;
+    border-bottom: 1px solid #dec58e;
+}
+.catalog-delimiter.bottom{
+    margin-top: 7px;
 }
 /* Fix some bootstrap issues */
 span.hidden-xs, span.hidden-sm, span.hidden-md, span.hidden-lg {
@@ -69,6 +116,60 @@ div.required .control-label:before {
 	content: '* ';
 	color: #F00;
 	font-weight: bold;
+}
+/* general styles */
+.heading-panel-green{
+    font-size: 20px;
+    line-height: 31px;
+    color: #fff;
+    margin-bottom: 33px;
+    background-color: #6ea500;
+    padding: 8px 20px;
+    font-family: Open Sans;
+}
+.subcategory-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-left: -30px;
+}
+.subcategory-list li{
+    background-color: #fdf4d7;
+    border: 1px solid #dabf87;
+    padding: 25px 19px 26px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin-bottom: 30px;
+    float: left;
+    margin-left: 30px;
+    width: 170px;
+}
+.subcategory-list li .image{
+    display: block;
+    text-align: center;
+}
+.subcategory-list li .image img{
+    vertical-align: top;
+    background-color: #fff;
+    border: 1px solid #f4deb8;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+.subcategory-list li .name.subcatname {
+    padding-top: 4px;
+    height: 42px;
+    overflow: hidden;
+    margin-bottom: 23px;
+
+}
+.subcategory-list li .name.subcatname a{
+    margin-bottom: 0;
+    color: #6ea500;
+    font-style: normal;
+    display: inline;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
 }
 /* Gradent to all drop down menus */
 .dropdown-menu li > a:hover {
@@ -399,36 +500,29 @@ footer li a{
 /* breadcrumb */
 .breadcrumb {
 	margin: 0 0 20px 0;
-	padding: 8px 0;
-	border: 1px solid #ddd;
+
+    background-color: #fdf3d6;
+    border-radius: 0;
+    padding: 12px 20px;
+    font-weight: bold;
+
 }
 .breadcrumb i {
 	font-size: 15px;
 }
 .breadcrumb > li {
 	text-shadow: 0 1px 0 #FFF;
-	padding: 0 20px;
+	padding: 0;
 	position: relative;
 	white-space: nowrap;
 }
-.breadcrumb > li + li:before {
-	content: '';
-	padding: 0;
+.breadcrumb > li a{
+    color: #323232;
+    font-size: 13px;
 }
-.breadcrumb > li:after {
-	content: '';
-	display: block;
-	position: absolute;
-	top: -3px;
-	right: -5px;
-	width: 26px;
-	height: 26px;
-	border-right: 1px solid #DDD;
-	border-bottom: 1px solid #DDD;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	-o-transform: rotate(-45deg);
-	transform: rotate(-45deg);
+.breadcrumb > li + li:before {
+	content: '\00bb';
+	padding: 0;
 }
 .pagination {
 	margin: 0;
@@ -640,15 +734,6 @@ div.owl-wrapper-outer{
 .carousel-control .icon-next:before {
 	content: '\f054';
 	font-family: FontAwesome;
-}
-/* featured */
-.featured-title{
-    font-size: 20px;
-    line-height: 31px;
-    color: #fff;
-    margin-bottom: 33px;
-    background-color: #6ea500;
-    padding: 8px 20px;
 }
 /* product list */
 .product-thumb {
