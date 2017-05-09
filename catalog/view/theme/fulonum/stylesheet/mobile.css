@@ -3,4 +3,7 @@
     #top-links .list-inline{
         text-align: center;
     }
+    .product-thumb .caption {
+        min-height: 180px;
+    }
 }
