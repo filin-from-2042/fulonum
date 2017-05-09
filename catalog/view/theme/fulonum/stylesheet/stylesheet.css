@@ -127,6 +127,9 @@ div.required .control-label:before {
     padding: 8px 20px;
     font-family: Open Sans;
 }
+.heading-panel-green.featured{
+    margin-top: 0;
+}
 .subcategory-list{
     padding: 0;
     margin: 0;
@@ -900,15 +903,60 @@ h2.price {
 	cursor: pointer;
 }
 
-.product-thumb.catalog  .caption .description{
+.product-thumb .caption .description{
     min-height: 60px;
 }
-.product-thumb.catalog .image{
+.product-thumb .image{
     margin-bottom: 15px;
 }
-.product-thumb.catalog h4{
+.product-thumb h4{
     margin-bottom: 10px;
     overflow: hidden;
+}
+
+.manufacturers-list a{
+    color: #323232;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+.manufacturers-list a:hover{
+    color:#6ea500;
+}
+.manufacturers-list .manufacturer-heading{
+    background: #fdf3d6;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #dec58e;
+}
+.manufacturers-list .manufacturer-heading span{
+    background: #323232;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 10px 0;
+    width: 50px;
+    text-align: center;
+}
+.manufacturers-list .manufacturer-link{
+
+}
+.manufacturers-list .manufacturer-link i{
+    color: #6ea500;
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 18px;
+    margin-right: 9px;
+}
+.manufacturers-list  .links-row{
+    padding-left: 20px;
 }
 @media (max-width: 1200px) {
 	.product-thumb .button-group button, .product-thumb .button-group button + button {

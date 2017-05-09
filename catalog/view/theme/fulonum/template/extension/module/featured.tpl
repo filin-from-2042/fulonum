@@ -1,9 +1,9 @@
-<h3 class="heading-panel-green"><?php echo $heading_title; ?></h3>
+<h3 class="heading-panel-green featured"><?php echo $heading_title; ?></h3>
 <div class="row">
   <?php foreach ($products as $product) { ?>
 
   <div class="product-layout col-lg-4 col-md-4 col-sm-6 col-xs-12">
-    <div class="product-thumb transition">
+    <div class="product-thumb transition featured">
       <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
       <div class="image">
           <a href="<?php echo $product['href']; ?>">
