@@ -450,9 +450,11 @@ class ControllerProductCategory extends Controller {
                     'filter_sub_category' => true
                 );
 
+                $categoryImageSrc = (isset($result['image']) && !empty($result['image'])) ? $result['image'] : 'no_image.png';
                 $data['categories'][] = array(
                     'name' => $result['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-                    'href' => $this->url->link('product/category', 'path=' . $result['category_id'])
+                    'href' => $this->url->link('product/category', 'path=' . $result['category_id']),
+                    'image_src' => $this->model_tool_image->resize($categoryImageSrc, $this->config->get($this->config->get('config_theme') . '_image_category_width'), $this->config->get($this->config->get('config_theme') . '_image_category_height'))
                 );
             }
 

@@ -6,4 +6,7 @@
     .product-thumb .caption {
         min-height: 180px;
     }
+    .product-thumb .button-group button, .product-thumb .button-group button + button {
+        width: 32%;
+    }
 }

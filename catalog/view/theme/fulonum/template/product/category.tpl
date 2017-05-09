@@ -95,12 +95,12 @@
       <div class="row">
         <?php foreach ($products as $product) { ?>
         <div class="product-layout product-list col-xs-12">
-          <div class="product-thumb">
+          <div class="product-thumb catalog">
             <div class="image"><a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-responsive" /></a></div>
             <div>
               <div class="caption">
                 <h4><a href="<?php echo $product['href']; ?>"><?php echo $product['name']; ?></a></h4>
-                <p><?php echo $product['description']; ?></p>
+                <p class="description"><?php echo $product['description']; ?></p>
                 <?php if ($product['price']) { ?>
                 <p class="price">
                   <?php if (!$product['special']) { ?>
