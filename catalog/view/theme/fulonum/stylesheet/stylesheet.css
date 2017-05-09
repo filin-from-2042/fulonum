@@ -375,10 +375,22 @@ footer a:hover {
 	color: #fff;
 }
 footer h5 {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 13px;
-	font-weight: bold;
-	color: #fff;
+    color: #f2d495;
+    line-height: normal;
+    font-size: 14px;
+    word-wrap: break-word;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+footer li{
+    padding: 4px 0 3px;
+    line-height: 20px;
+}
+footer li a{
+    font-size: 13px;
+    color: #a3a3a3;
+    word-wrap: break-word;
 }
 /* alert */
 .alert {
