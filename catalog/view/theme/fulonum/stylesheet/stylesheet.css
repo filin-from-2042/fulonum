@@ -709,6 +709,9 @@ div.owl-wrapper-outer{
     border: 0;
     margin-bottom: -1px;
 }
+.list-group .list-group-item.list-title{
+    margin-bottom: 0;
+}
 .list-group li{
     border: 0;
     border-bottom: 1px solid #f0d4aa;
@@ -1059,4 +1062,93 @@ h2.price {
 .btn-info:hover, .btn-info:active, .btn-info.active, .btn-info.disabled, .btn-info[disabled] {
     background-image: none;
     background-color: #df5c39;
+}
+
+
+/* product info */
+.product-info{
+    font-size: 13px;
+}
+
+.product-info h1{
+    color: #323232;
+    border-bottom: 1px solid #dec58e;
+    margin-bottom: 10px;
+    padding-bottom: 15px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: normal;
+}
+
+.product-info  .general-info-column{
+    text-transform: uppercase;
+    line-height: 24px;color: #323232;
+    font-weight: bold;
+}
+.product-info .prop-value{
+    color: #6ea500
+}
+
+.product-info .prop-value.in-stock{
+    background-color: #6ba239;
+    color: #fff;
+    padding: 0 7px;
+    margin: 0 9px;
+    font-size: 16px;
+}
+.product-info .act-price{
+    font-weight: bold;
+}
+.product-info #input-quantity{
+    width: 30px;
+    padding: 4px 6px;
+    border-radius: 0;
+    border-width: 1px;
+    display: inline-block;
+}
+.product-info  #button-cart i{
+    font-size: 26px;
+    vertical-align: middle;
+    margin-right: 9px;
+}
+.product-info  #button-cart,
+.product-info  #button-review{
+    display: inline-block;
+    background-color: #fcefce;
+    font-size: 15px;
+    color: #444444;
+    padding: 9px 19px 10px 11px;
+    margin: 0 20px;
+    line-height: 31px;
+    font-family: Open Sans;
+    font-weight: 600;
+    border: 1px solid #d7c09a;
+    background-image: none;
+    border-radius: 0;
+    box-shadow: none;
+    width: auto;
+}
+.product-info  #button-cart:hover ,
+.product-info  #button-review:hover {
+    background-color: #0076AB;
+    border-color: #046997;
+    color: #fff;
+}
+.product-info .rating a{
+    margin-left: 5px;
+    color:#6ea500;
+}
+.product-info .rating .fa-star-o {
+    font-size: 21px;
+}
+
+.product-info .table-striped>tbody>tr:nth-of-type(odd){
+    padding: 13px 20px;
+    line-height: 32px;
+    color: #323232;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid #dec58e;
+    border-bottom: 4px solid #6ea500;
+    background-color: #fdf3d6;
 }
