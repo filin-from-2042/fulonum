@@ -1230,3 +1230,230 @@ h2.price {
     font-style: italic;
     margin-left: 15px;
 }
+.account-account #content a,
+.account-edit #content a,
+.account-password #content a,
+.account-address #content a,
+.account-wishlist #content a,
+.account-download #content a,
+.account-recurring #content a,
+.account-reward #content a,
+.account-return #content a,
+.account-transaction #content a,
+.account-newsletter #content a,
+.account-logout #content a,
+.account-order #content a{
+    color: #7e7e7e;
+    text-decoration: underline;
+}
+
+.account-account #content a:hover,
+.account-edit #content a:hover,
+.account-password #content a:hover,
+.account-address #content a:hover,
+.account-wishlist #content a:hover,
+.account-download #content a:hover,
+.account-recurring #content a:hover,
+.account-reward #content a:hover,
+.account-return #content a:hover,
+.account-transaction #content a:hover,
+.account-newsletter #content a:hover,
+.account-logout #content a:hover,
+.account-account-order #content a:hover{
+    text-decoration: none;
+    color: #6ea500;
+}
+
+.account-account #content h2,
+.account-edit #content h2,
+.account-password #content h2,
+.account-address #content h2,
+.account-wishlist #content h2,
+.account-download #content h2,
+.account-recurring #content h2,
+.account-reward #content h2,
+.account-return #content h2,
+.account-transaction #content h2,
+.account-newsletter #content h2,
+.account-logout #content h2,
+.account-order #content h2,
+.account-account #content h1,
+.account-edit #content h1,
+.account-password #content h1,
+.account-address #content h1,
+.account-wishlist #content h1,
+.account-download #content h1,
+.account-recurring #content h1,
+.account-reward #content h1,
+.account-return #content h1,
+.account-transaction #content h1,
+.account-newsletter #content h1,
+.account-logout #content h1,
+.account-order #content h1{
+    border-bottom: 1px solid #dec58e;
+    line-height: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    color: #6ea500;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.account-account #content legend,
+.account-edit #content legend,
+.account-password #content legend,
+.account-address #content legend
+.account-wishlist #content legend,
+.account-download #content legend,
+.account-recurring #content legend,
+.account-reward #content legend,
+.account-return #content legend,
+.account-transaction #content legend,
+.account-newsletter #content legend,
+.account-logout #content legend,
+.account-order #content legend{
+    color: #323232;
+    font-size: 15px;
+    border-bottom: 1px solid #dec58e;
+}
+.account-account #content input,
+.account-edit #content input,
+.account-password #content input,
+.account-address #content input,
+.account-wishlist #content input,
+.account-download #content input,
+.account-recurring #content input,
+.account-reward #content input,
+.account-return #content input,
+.account-transaction #content input,
+.account-newsletter #content input,
+.account-logout #content input,
+.account-order #content input{
+    border-radius: 0;
+    padding: 4px 6px;
+    line-height: 20px;
+    /*height: 30px;*/
+}
+.account-account #content label,
+.account-edit #content label,
+.account-password #content label,
+.account-address #content label,
+.account-wishlist #content label,
+.account-download #content label,
+.account-recurring #content label,
+.account-reward #content label,
+.account-return #content label,
+.account-transaction #content label,
+.account-newsletter #content label,
+.account-logout #content label,
+.account-order #content label{
+    font-size: 13px;
+    color: #323232;
+    font-weight: bold;
+}
+.account-account #content a.btn,
+.account-edit #content a.btn,
+.account-password #content a.btn,
+.account-address #content a.btn,
+.account-wishlist #content a.btn,
+.account-download #content a.btn,
+.account-recurring #content a.btn,
+.account-reward #content a.btn,
+.account-return #content a.btn,
+.account-transaction #content a.btn,
+.account-newsletter #content a.btn,
+.account-logout #content a.btn,
+.account-order #content a.btn,
+.account-account #content input.btn,
+.account-edit #content input.btn,
+.account-password #content input.btn,
+.account-address #content input.btn,
+.account-wishlist #content input.btn,
+.account-download #content input.btn,
+.account-recurring #content input.btn,
+.account-reward #content input.btn,
+.account-return #content input.btn,
+.account-transaction #content input.btn,
+.account-newsletter #content input.btn,
+.account-logout #content input.btn,
+.account-order #content input.btn,
+.account-account #content button,
+.account-edit #content button,
+.account-password #content button,
+.account-address #content button,
+.account-wishlist #content button,
+.account-download #content button,
+.account-recurring #content button,
+.account-reward #content button,
+.account-return #content button,
+.account-transaction #content button,
+.account-newsletter #content button,
+.account-logout #content button,
+.account-order #content button{
+    background: transparent;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #fcefce;
+    font-size: 14px;
+    line-height: 19px;
+    font-family: Open Sans;
+    font-weight: 600;
+    border: 1px solid #dac39e;
+    border-radius: 0;
+    color: #444444;
+    padding: 5px 10px;
+}
+.account-account #content a.btn:hover,
+.account-edit #content a.btn:hover,
+.account-password #content a.btn:hover,
+.account-address #content a.btn:hover,
+.account-wishlist #content a.btn:hover,
+.account-download #content a.btn:hover,
+.account-recurring #content a.btn:hover,
+.account-reward #content a.btn:hover,
+.account-return #content a.btn:hover,
+.account-transaction #content a.btn:hover,
+.account-newsletter #content a.btn:hover,
+.account-logout #content a.btn:hover,
+.account-order #content a.btn:hover,
+.account-account #content input.btn:hover,
+.account-edit #content input.btn:hover,
+.account-password #content input.btn:hover,
+.account-address #content input.btn:hover,
+.account-wishlist #content input.btn:hover,
+.account-download #content input.btn:hover,
+.account-recurring #content input.btn:hover,
+.account-reward #content input.btn:hover,
+.account-return #content input.btn:hover,
+.account-transaction #content input.btn:hover,
+.account-newsletter #content input.btn:hover,
+.account-logout #content input.btn:hover,
+.account-order #content input.btn:hover,
+.account-account #content button:hover,
+.account-edit #content button:hover,
+.account-password #content button:hover,
+.account-address #content button:hover,
+.account-wishlist #content button:hover,
+.account-download #content button:hover,
+.account-recurring #content button:hover,
+.account-reward #content button:hover,
+.account-return #content button:hover,
+.account-transaction #content button:hover,
+.account-newsletter #content button:hover,
+.account-logout #content button:hover,
+.account-order #content button:hover{
+    background-color: #0076ab;
+    border-color: #046997;
+    color:#fff;
+}
+
+.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th,
+.table-bordered{
+    border:1px solid #dec58e;
+}
