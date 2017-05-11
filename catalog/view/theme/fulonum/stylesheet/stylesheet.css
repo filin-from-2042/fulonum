@@ -520,7 +520,7 @@ footer li a{
 	white-space: nowrap;
 }
 .breadcrumb > li a{
-    color: #323232;
+    color: #323232 !important;
     font-size: 13px;
 }
 .breadcrumb > li + li:before {
