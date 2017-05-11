@@ -1153,6 +1153,7 @@ h2.price {
     background-color: #fdf3d6;
 }
 /* account-login */
+.affiliate-login .well,
 .account-login .well{
     border: 1px solid #dec58e;
     background-color: #fdf3d6;
@@ -1161,36 +1162,44 @@ h2.price {
     border-radius: 0;
 }
 
+.affiliate-login .well .well-icon,
 .account-login .well .well-icon,
+.affiliate-login .well .well-header,
 .account-login .well .well-header{
     display: inline-block;
     max-width: 70%;
     vertical-align: top;
 }
+.affiliate-login .well .well-header h2,
 .account-login .well .well-header h2{
     margin-top: 0;
     font-size: 20px;
     color: #323232;
 }
+.affiliate-login .well .well-header p,
 .account-login .well .well-header p{
     font-style: italic;
     font-weight: normal;
 }
+.affiliate-login .well .well-icon,
 .account-login .well .well-icon{
     font-size: 56px;
     color: #6ea500;
     margin-right: 14px;
     vertical-align: text-bottom;
 }
+.affiliate-login .well hr,
 .account-login .well hr{
     border-bottom: 1px solid #dec58e;
     margin: 15px 0;
 }
+.affiliate-login .well label,
 .account-login .well label{
     font-weight: bold;
     float: left;
     padding: 5px 0;
 }
+.affiliate-login .well input,
 .account-login .well input{
     margin-left: 60px;
     width: 67%;
@@ -1199,10 +1208,13 @@ h2.price {
     border-radius: 0;
     height: 30px;
 }
+.affiliate-login .well label,
 .account-login .well label,
+.affiliate-login .well input,
 .account-login .well input{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+.affiliate-login .well .btn.btn-primary,
 .account-login .well .btn.btn-primary{
     display: inline-block;
     text-decoration: none;
@@ -1214,15 +1226,18 @@ h2.price {
     box-shadow: none;
     background: transparent;
 }
+.affiliate-login .well .btn.btn-primary i,
 .account-login .well .btn.btn-primary i{
     font-size: 26px;
     text-align: center;
     vertical-align: middle;
     margin: 0 9px;
 }
+.affiliate-login .well .forgotten-link,
 .account-login .well .forgotten-link{
     line-height: 33px;
 }
+.affiliate-login .well .forgotten-link,
 .account-login .well .forgotten-link{
     text-decoration: underline;
     display: inline-block;
@@ -1230,6 +1245,7 @@ h2.price {
     font-style: italic;
     margin-left: 15px;
 }
+
 .account-account #content a,
 .account-edit #content a,
 .account-password #content a,
