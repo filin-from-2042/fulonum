@@ -10,7 +10,8 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	color: #444;
 }
-.panel{
+.panel,
+.panel-default>.panel-heading{
     background-color: #fdf3d6;
 }
 /* default font size */
@@ -318,11 +319,17 @@ color:#6ea500;
 	color: #444;
 }
 #cart .dropdown-menu {
-	background: #eee;
+    background-color: #fdf3d6;
 	z-index: 1001;
+}
+#cart .table-striped>tbody>tr:nth-of-type(odd){
+    background-color: #fdf3d6;
 }
 #cart .dropdown-menu {
 	min-width: 100%;
+}
+#cart a{
+    color: #6ea500;
 }
 @media (max-width: 478px) {
 	#cart .dropdown-menu {
@@ -1264,6 +1271,10 @@ h2.price {
 .information-information #content a,
 .information-sitemap #content a,
 
+.checkout-checkout #content a,
+
+.checkout-cart #content a,
+
 .account-account #content a,
 .account-return-add #content a,
 .account-address-add #content a,
@@ -1300,6 +1311,10 @@ h2.price {
 .information-contact #content a:hover,
 .information-information #content a:hover,
 .information-sitemap #content a:hover,
+
+.checkout-checkout #content a:hover,
+
+.checkout-cart #content a:hover,
 
 .account-account #content a:hover,
 .account-return-add #content a:hover,
@@ -1339,6 +1354,10 @@ h2.price {
 .information-information #content h2,
 .information-sitemap #content h2,
 
+.checkout-checkout #content h2,
+
+.checkout-cart #content h2,
+
 .account-account #content h2,
 .account-return-add #content h2,
 .account-address-add #content h2,
@@ -1362,6 +1381,10 @@ h2.price {
 .information-contact #content h1,
 .information-information #content h1,
 .information-sitemap #content h1,
+
+.checkout-checkout #content h1,
+
+.checkout-cart #content h1,
 
 .not-found-content#content h1,
 .affiliate-account #content h1,
@@ -1406,6 +1429,10 @@ h2.price {
 .information-information #content legend,
 .information-sitemap #content legend,
 
+.checkout-checkout #content legend,
+
+.checkout-cart #content legend,
+
 .not-found-content#content legend,
 .affiliate-account #content legend,
 .affiliate-edit #content legend,
@@ -1446,6 +1473,12 @@ h2.price {
 .information-information #content input,
 .information-sitemap #content input,
 
+.checkout-checkout #content input,
+
+.checkout-cart #content input,
+.checkout-cart #content select,
+.checkout-checkout #content select,
+
 .not-found-content#content input,
 .affiliate-account #content input,
 .affiliate-edit #content input,
@@ -1481,6 +1514,10 @@ h2.price {
 .information-contact #content textarea,
 .information-information #content textarea,
 .information-sitemap #content textarea,
+
+.checkout-checkout #content textarea,
+
+.checkout-cart #content textarea,
 
 .not-found-content#content textarea,
 .affiliate-account #content textarea,
@@ -1523,6 +1560,10 @@ h2.price {
 .information-information #content label,
 .information-sitemap #content label,
 
+.checkout-checkout #content label,
+
+.checkout-cart #content label,
+
 .not-found-content#content label,
 .affiliate-account #content label,
 .affiliate-edit #content label,
@@ -1562,6 +1603,10 @@ h2.price {
 .information-information #content a.btn,
 .information-sitemap #content a.btn,
 
+.checkout-checkout #content a.btn,
+
+.checkout-cart #content a.btn,
+
 .not-found-content#content a.btn,
 .affiliate-account #content a.btn,
 .affiliate-edit #content a.btn,
@@ -1597,6 +1642,12 @@ h2.price {
 .information-information #content input.btn,
 .information-sitemap #content input.btn,
 
+.checkout-checkout #content input.btn,
+
+.checkout-cart #content input.btn,
+
+#cart .dropdown-menu input.btn,
+
 .not-found-content#content input.btn,
 .affiliate-account #content input.btn,
 .affiliate-edit #content input.btn,
@@ -1631,6 +1682,12 @@ h2.price {
 .information-contact #content button,
 .information-information #content button,
 .information-sitemap #content button,
+
+.checkout-checkout #content button,
+
+.checkout-cart #content button,
+
+#cart .dropdown-menu button,
 
 .not-found-content#content button,
 .affiliate-account #content button,
@@ -1681,6 +1738,10 @@ h2.price {
 .information-information #content a.btn:hover,
 .information-sitemap #content a.btn:hover,
 
+.checkout-checkout #content a.btn:hover,
+
+.checkout-cart #content a.btn:hover,
+
 .not-found-content#content a.btn:hover,
 .affiliate-account #content a.btn:hover,
 .affiliate-edit #content a.btn:hover,
@@ -1716,6 +1777,12 @@ h2.price {
 .information-information #content input.btn:hover,
 .information-sitemap #content input.btn:hover,
 
+.checkout-checkout #content input.btn:hover,
+
+.checkout-cart #content input.btn:hover,
+
+#cart .dropdown-menu input.btn:hover,
+
 .not-found-content#content input.btn:hover,
 .affiliate-account #content input.btn:hover,
 .affiliate-edit #content input.btn:hover,
@@ -1748,6 +1815,12 @@ h2.price {
 .information-contact #content button:hover,
 .information-information #content button:hover,
 .information-sitemap #content button:hover,
+
+.checkout-checkout #content button:hover,
+
+.checkout-cart #content button:hover,
+
+#cart .dropdown-menu button:hover,
 
 .not-found-content#content button:hover,
 .account-account #content button:hover,
