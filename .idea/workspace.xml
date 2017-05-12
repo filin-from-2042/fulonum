@@ -26,7 +26,16 @@
       <file leaf-file-name="stylesheet.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/catalog/view/theme/fulonum/stylesheet/stylesheet.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1285" column="16" selection-start="27312" selection-end="27312" vertical-scroll-proportion="0.95928144" vertical-offset="21044" max-vertical-offset="32351">
+            <state line="1876" column="24" selection-start="44767" selection-end="44767" vertical-scroll-proportion="-0.017964073" vertical-offset="31907" max-vertical-offset="32742">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="information.tpl" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/catalog/view/theme/fulonum/template/information/information.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="74" selection-start="613" selection-end="613" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="442">
               <folding />
             </state>
           </provider>
@@ -60,7 +69,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/catalog/controller/common/header.php" />
         <option value="$PROJECT_DIR$/catalog/language/ru-ru/common/header.php" />
         <option value="$PROJECT_DIR$/catalog/view/theme/fulonum/template/common/search.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/fulonum/template/common/header.tpl" />
@@ -110,6 +118,7 @@
         <option value="$PROJECT_DIR$/catalog/view/theme/fulonum/template/account/wishlist.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/fulonum/template/extension/module/affiliate.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/fulonum/template/error/not_found.tpl" />
+        <option value="$PROJECT_DIR$/catalog/view/theme/fulonum/template/information/information.tpl" />
         <option value="$PROJECT_DIR$/catalog/view/theme/fulonum/stylesheet/stylesheet.css" />
       </list>
     </option>
@@ -275,11 +284,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="extension" />
+              <option name="myItemId" value="information" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fulonum.ru" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fulonum.ru" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="module" />
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="theme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fulonum" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,72 +381,8 @@
               <option name="myItemId" value="template" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fulonum.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fulonum.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fulonum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="affiliate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fulonum.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fulonum.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="catalog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="theme" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fulonum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="template" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="account" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -721,11 +692,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Web\OpenServer\OpenServer\domains\fulonum.ru\catalog\view\theme\fulonum\template\information" />
       <recent name="C:\Web\OpenServer\OpenServer\domains\fulonum.ru\catalog\view\theme\fulonum\template" />
       <recent name="C:\Web\OpenServer\OpenServer\domains\fulonum.ru\catalog\view\theme\fulonum\template\extension\module" />
       <recent name="C:\Web\OpenServer\OpenServer\domains\fulonum.ru\catalog\view\theme\fulonum\template\account" />
       <recent name="C:\Web\OpenServer\OpenServer\domains\fulonum.ru\catalog\view\theme\fulonum\template\product" />
-      <recent name="C:\Web\OpenServer\OpenServer\domains\fulonum.ru\catalog\view\theme\fulonum\template\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Web\OpenServer\OpenServer\domains\fulonum.ru\catalog\view\theme\fulonum\image" />
@@ -817,11 +788,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/catalog/language/ru-ru/product/compare.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="876" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/language/ru-ru/extension/module/category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="34" selection-start="51" selection-end="92" vertical-scroll-proportion="0.06148282" vertical-offset="0" max-vertical-offset="553" />
@@ -1097,9 +1063,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/catalog/view/theme/fulonum/template/information/information.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="74" selection-start="613" selection-end="613" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/catalog/view/theme/fulonum/stylesheet/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1285" column="16" selection-start="27312" selection-end="27312" vertical-scroll-proportion="0.95928144" vertical-offset="21044" max-vertical-offset="32351">
+        <state line="1876" column="24" selection-start="44767" selection-end="44767" vertical-scroll-proportion="-0.017964073" vertical-offset="31907" max-vertical-offset="32742">
           <folding />
         </state>
       </provider>

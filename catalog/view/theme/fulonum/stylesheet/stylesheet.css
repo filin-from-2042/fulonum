@@ -596,10 +596,29 @@ footer li a{
 	background-image: linear-gradient(to bottom, #23a1d1, #1f90bb);
 	background-repeat: repeat-x;
 	border-color: #1f90bb #1f90bb #145e7a;
+
+    background: transparent;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #fcefce;
+    font-size: 14px;
+    line-height: 19px;
+    font-family: Open Sans;
+    font-weight: 600;
+    border: 1px solid #dac39e;
+    border-radius: 0;
+    color: #444444;
+    padding: 5px 10px;
+
 }
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
 	background-color: #1f90bb;
 	background-position: 0 -15px;
+
+    background-color: #0076ab;
+    border-color: #046997;
+    color:#fff;
 }
 .btn-warning {
 	color: #ffffff;
@@ -1264,6 +1283,10 @@ h2.price {
     margin-left: 15px;
 }
 
+.checkout-cart .form-control{
+    height: 31px;
+}
+
 .not-found-content#content a,
 .affiliate-account #content a,
 .affiliate-edit #content a,
@@ -1319,7 +1342,7 @@ h2.price {
 .affiliate-transaction #content a:hover,
 
 .information-contact #content a:hover,
-.information-information #content a:hover,
+.information-information#content a:hover,
 .information-sitemap #content a:hover,
 
 .checkout-checkout #content a:hover,
@@ -1363,7 +1386,7 @@ h2.price {
 .affiliate-transaction #content h2,
 
 .information-contact #content h2,
-.information-information #content h2,
+.information-information#content h2,
 .information-sitemap #content h2,
 
 .checkout-checkout #content h2,
@@ -1393,7 +1416,7 @@ h2.price {
 .account-forgotten #content h2,
 
 .information-contact #content h1,
-.information-information #content h1,
+.information-information#content h1,
 .information-sitemap #content h1,
 
 .checkout-checkout #content h1,
@@ -1442,7 +1465,7 @@ h2.price {
 }
 
 .information-contact #content legend,
-.information-information #content legend,
+.information-information#content legend,
 .information-sitemap #content legend,
 
 .product-compare #content legend,
@@ -1488,7 +1511,7 @@ h2.price {
 
 
 .information-contact #content input,
-.information-information #content input,
+.information-information#content input,
 .information-sitemap #content input,
 
 .product-compare #content input,
@@ -1534,7 +1557,7 @@ h2.price {
 
 
 .information-contact #content textarea,
-.information-information #content textarea,
+.information-information#content textarea,
 .information-sitemap #content textarea,
 
 .product-compare #content textarea,
@@ -1583,7 +1606,7 @@ h2.price {
 
 
 .information-contact #content label,
-.information-information #content label,
+.information-information#content label,
 .information-sitemap #content label,
 
 .product-compare #content label,
@@ -1628,7 +1651,7 @@ h2.price {
 }
 
 .information-contact #content a.btn,
-.information-information #content a.btn,
+.information-information#content a.btn,
 .information-sitemap #content a.btn,
 
 .product-compare #content a.btn,
@@ -1669,7 +1692,7 @@ h2.price {
 .account-forgotten #content a.btn,
 
 .information-contact #content input.btn,
-.information-information #content input.btn,
+.information-information#content input.btn,
 .information-sitemap #content input.btn,
 
 .product-compare #content input.btn,
@@ -1712,7 +1735,7 @@ h2.price {
 .account-forgotten #content input.btn,
 
 .information-contact #content button,
-.information-information #content button,
+.information-information#content button,
 .information-sitemap #content button,
 
 .product-compare #content button,
@@ -1769,7 +1792,7 @@ h2.price {
 }
 
 .information-contact #content a.btn:hover,
-.information-information #content a.btn:hover,
+.information-information#content a.btn:hover,
 .information-sitemap #content a.btn:hover,
 
 .product-compare #content a.btn:hover,
@@ -1810,7 +1833,7 @@ h2.price {
 .account-forgotten #content a.btn:hover,
 
 .information-contact #content input.btn:hover,
-.information-information #content input.btn:hover,
+.information-information#content input.btn:hover,
 .information-sitemap #content input.btn:hover,
 
 .checkout-checkout #content input.btn:hover,
@@ -1851,7 +1874,7 @@ h2.price {
 .account-order #content input.btn:hover,
 
 .information-contact #content button:hover,
-.information-information #content button:hover,
+.information-information#content button:hover,
 .information-sitemap #content button:hover,
 
 .product-compare #content button:hover,
