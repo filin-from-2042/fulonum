@@ -1283,6 +1283,8 @@ h2.price {
 
 .checkout-cart #content a,
 
+.product-compare #content a,
+
 .account-account #content a,
 .account-return-add #content a,
 .account-address-add #content a,
@@ -1323,6 +1325,8 @@ h2.price {
 .checkout-checkout #content a:hover,
 
 .checkout-cart #content a:hover,
+
+.product-compare #content a:hover,
 
 .account-account #content a:hover,
 .account-return-add #content a:hover,
@@ -1366,6 +1370,8 @@ h2.price {
 
 .checkout-cart #content h2,
 
+.product-compare #content h2,
+
 .account-account #content h2,
 .account-return-add #content h2,
 .account-address-add #content h2,
@@ -1393,6 +1399,8 @@ h2.price {
 .checkout-checkout #content h1,
 
 .checkout-cart #content h1,
+
+.product-compare #content h1,
 
 .not-found-content#content h1,
 .affiliate-account #content h1,
@@ -1436,6 +1444,8 @@ h2.price {
 .information-contact #content legend,
 .information-information #content legend,
 .information-sitemap #content legend,
+
+.product-compare #content legend,
 
 .checkout-checkout #content legend,
 
@@ -1481,6 +1491,8 @@ h2.price {
 .information-information #content input,
 .information-sitemap #content input,
 
+.product-compare #content input,
+
 .checkout-checkout #content input,
 
 .product-info#content input,
@@ -1524,6 +1536,8 @@ h2.price {
 .information-contact #content textarea,
 .information-information #content textarea,
 .information-sitemap #content textarea,
+
+.product-compare #content textarea,
 
 .checkout-checkout #content textarea,
 
@@ -1572,6 +1586,8 @@ h2.price {
 .information-information #content label,
 .information-sitemap #content label,
 
+.product-compare #content label,
+
 .checkout-checkout #content label,
 
 .checkout-cart #content label,
@@ -1615,6 +1631,8 @@ h2.price {
 .information-information #content a.btn,
 .information-sitemap #content a.btn,
 
+.product-compare #content a.btn,
+
 .checkout-checkout #content a.btn,
 
 .checkout-cart #content a.btn,
@@ -1653,6 +1671,8 @@ h2.price {
 .information-contact #content input.btn,
 .information-information #content input.btn,
 .information-sitemap #content input.btn,
+
+.product-compare #content input.btn,
 
 .checkout-checkout #content input.btn,
 
@@ -1694,6 +1714,8 @@ h2.price {
 .information-contact #content button,
 .information-information #content button,
 .information-sitemap #content button,
+
+.product-compare #content button,
 
 .checkout-checkout #content button,
 
@@ -1750,6 +1772,8 @@ h2.price {
 .information-information #content a.btn:hover,
 .information-sitemap #content a.btn:hover,
 
+.product-compare #content a.btn:hover,
+
 .checkout-checkout #content a.btn:hover,
 
 .checkout-cart #content a.btn:hover,
@@ -1791,6 +1815,8 @@ h2.price {
 
 .checkout-checkout #content input.btn:hover,
 
+.product-compare #content input.btn:hover,
+
 .checkout-cart #content input.btn:hover,
 
 #cart .dropdown-menu input.btn:hover,
@@ -1827,6 +1853,8 @@ h2.price {
 .information-contact #content button:hover,
 .information-information #content button:hover,
 .information-sitemap #content button:hover,
+
+.product-compare #content button:hover,
 
 .checkout-checkout #content button:hover,
 
