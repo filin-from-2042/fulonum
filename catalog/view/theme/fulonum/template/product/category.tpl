@@ -49,9 +49,9 @@
         </div>
       </div>
 
+        <hr class="catalog-delimiter">
       <?php } ?>
       <?php if ($products) { ?>
-        <hr class="catalog-delimiter">
       <div class="row">
           <div class="col-md-4 col-xs-6">
               <div class="form-group input-group input-group-sm">
