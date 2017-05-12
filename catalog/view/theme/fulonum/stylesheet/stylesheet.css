@@ -10,6 +10,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	color: #444;
 }
+.panel{
+    background-color: #fdf3d6;
+}
 /* default font size */
 .fa {
 	font-size: 14px;
@@ -1257,7 +1260,12 @@ h2.price {
 .affiliate-tracking #content a,
 .affiliate-transaction #content a,
 
+.information-contact #content a,
+.information-information #content a,
+.information-sitemap #content a,
+
 .account-account #content a,
+.account-return-add #content a,
 .account-address-add #content a,
 .account-voucher #content a,
 .account-address-edit #content a,
@@ -1289,7 +1297,12 @@ h2.price {
 .affiliate-tracking #content a:hover,
 .affiliate-transaction #content a:hover,
 
+.information-contact #content a:hover,
+.information-information #content a:hover,
+.information-sitemap #content a:hover,
+
 .account-account #content a:hover,
+.account-return-add #content a:hover,
 .account-address-add #content a:hover,
 .account-voucher #content a:hover,
 .account-address-edit #content a:hover,
@@ -1322,7 +1335,12 @@ h2.price {
 .affiliate-tracking #content h2,
 .affiliate-transaction #content h2,
 
+.information-contact #content h2,
+.information-information #content h2,
+.information-sitemap #content h2,
+
 .account-account #content h2,
+.account-return-add #content h2,
 .account-address-add #content h2,
 .account-voucher #content h2,
 .account-address-edit #content h2,
@@ -1341,6 +1359,10 @@ h2.price {
 .account-register #content h2,
 .account-forgotten #content h2,
 
+.information-contact #content h1,
+.information-information #content h1,
+.information-sitemap #content h1,
+
 .not-found-content#content h1,
 .affiliate-account #content h1,
 .affiliate-edit #content h1,
@@ -1353,6 +1375,7 @@ h2.price {
 .affiliate-transaction #content h1,
 
 .account-account #content h1,
+.account-return-add #content h1,
 .account-address-add #content h1,
 .account-voucher #content h1,
 .account-address-edit #content h1,
@@ -1378,6 +1401,11 @@ h2.price {
     font-size: 17px;
     font-weight: 600;
 }
+
+.information-contact #content legend,
+.information-information #content legend,
+.information-sitemap #content legend,
+
 .not-found-content#content legend,
 .affiliate-account #content legend,
 .affiliate-edit #content legend,
@@ -1390,6 +1418,7 @@ h2.price {
 .affiliate-transaction #content legend,
 
 .account-account #content legend,
+.account-return-add #content legend,
 .account-address-add #content legend,
 .account-voucher #content legend,
 .account-address-edit #content legend,
@@ -1411,6 +1440,12 @@ h2.price {
     font-size: 15px;
     border-bottom: 1px solid #dec58e;
 }
+
+
+.information-contact #content input,
+.information-information #content input,
+.information-sitemap #content input,
+
 .not-found-content#content input,
 .affiliate-account #content input,
 .affiliate-edit #content input,
@@ -1423,6 +1458,7 @@ h2.price {
 .affiliate-transaction #content input,
 
 .account-account #content input,
+.account-return-add #content input,
 .account-address-add #content input,
 .account-voucher #content input,
 .account-address-edit #content input,
@@ -1441,6 +1477,11 @@ h2.price {
 .account-register #content input,
 .account-forgotten #content input,
 
+
+.information-contact #content textarea,
+.information-information #content textarea,
+.information-sitemap #content textarea,
+
 .not-found-content#content textarea,
 .affiliate-account #content textarea,
 .affiliate-edit #content textarea,
@@ -1453,6 +1494,7 @@ h2.price {
 .affiliate-transaction #content textarea,
 
 .account-account #content textarea,
+.account-return-add #content textarea,
 .account-address-add #content textarea,
 .account-voucher #content textarea,
 .account-address-edit #content textarea,
@@ -1475,6 +1517,12 @@ h2.price {
     line-height: 20px;
     /*height: 30px;*/
 }
+
+
+.information-contact #content label,
+.information-information #content label,
+.information-sitemap #content label,
+
 .not-found-content#content label,
 .affiliate-account #content label,
 .affiliate-edit #content label,
@@ -1487,6 +1535,7 @@ h2.price {
 .affiliate-transaction #content label,
 
 .account-account #content label,
+.account-return-add #content label,
 .account-address-add #content label,
 .account-voucher #content label,
 .account-address-edit #content label,
@@ -1508,6 +1557,11 @@ h2.price {
     color: #323232;
     font-weight: bold;
 }
+
+.information-contact #content a.btn,
+.information-information #content a.btn,
+.information-sitemap #content a.btn,
+
 .not-found-content#content a.btn,
 .affiliate-account #content a.btn,
 .affiliate-edit #content a.btn,
@@ -1520,6 +1574,7 @@ h2.price {
 .affiliate-transaction #content a.btn,
 
 .account-account #content a.btn,
+.account-return-add #content a.btn,
 .account-address-add #content a.btn,
 .account-voucher #content a.btn,
 .account-address-edit #content a.btn,
@@ -1538,6 +1593,10 @@ h2.price {
 .account-register #content a.btn,
 .account-forgotten #content a.btn,
 
+.information-contact #content input.btn,
+.information-information #content input.btn,
+.information-sitemap #content input.btn,
+
 .not-found-content#content input.btn,
 .affiliate-account #content input.btn,
 .affiliate-edit #content input.btn,
@@ -1550,6 +1609,7 @@ h2.price {
 .affiliate-transaction #content input.btn,
 
 .account-account #content input.btn,
+.account-return-add #content input.btn,
 .account-address-add #content input.btn,
 .account-voucher #content input.btn,
 .account-address-edit #content input.btn,
@@ -1568,6 +1628,10 @@ h2.price {
 .account-register #content input.btn,
 .account-forgotten #content input.btn,
 
+.information-contact #content button,
+.information-information #content button,
+.information-sitemap #content button,
+
 .not-found-content#content button,
 .affiliate-account #content button,
 .affiliate-edit #content button,
@@ -1580,6 +1644,7 @@ h2.price {
 .affiliate-transaction #content button,
 
 .account-account #content button,
+.account-return-add #content button,
 .account-address-add #content button,
 .account-voucher #content button,
 .account-address-edit #content button,
@@ -1611,6 +1676,11 @@ h2.price {
     color: #444444;
     padding: 5px 10px;
 }
+
+.information-contact #content a.btn:hover,
+.information-information #content a.btn:hover,
+.information-sitemap #content a.btn:hover,
+
 .not-found-content#content a.btn:hover,
 .affiliate-account #content a.btn:hover,
 .affiliate-edit #content a.btn:hover,
@@ -1623,6 +1693,7 @@ h2.price {
 .affiliate-transaction #content a.btn:hover,
 
 .account-account #content a.btn:hover,
+.account-return-add #content a.btn:hover,
 .account-address-add #content a.btn:hover,
 .account-voucher #content a.btn:hover,
 .account-address-edit #content a.btn:hover,
@@ -1641,6 +1712,10 @@ h2.price {
 .account-register #content a.btn:hover,
 .account-forgotten #content a.btn:hover,
 
+.information-contact #content input.btn:hover,
+.information-information #content input.btn:hover,
+.information-sitemap #content input.btn:hover,
+
 .not-found-content#content input.btn:hover,
 .affiliate-account #content input.btn:hover,
 .affiliate-edit #content input.btn:hover,
@@ -1653,6 +1728,7 @@ h2.price {
 .affiliate-transaction #content input.btn:hover,
 
 .account-account #content input.btn:hover,
+.account-return-add #content input.btn:hover,
 .account-address-add #content input.btn:hover,
 .account-voucher #content input.btn:hover,
 .account-address-edit #content input.btn:hover,
@@ -1669,8 +1745,13 @@ h2.price {
 .account-logout #content input.btn:hover,
 .account-order #content input.btn:hover,
 
+.information-contact #content button:hover,
+.information-information #content button:hover,
+.information-sitemap #content button:hover,
+
 .not-found-content#content button:hover,
 .account-account #content button:hover,
+.account-return-add #content button:hover,
 .account-address-add #content button:hover,
 .account-voucher #content button:hover,
 .account-edit #content button:hover,
