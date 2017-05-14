@@ -710,6 +710,35 @@ div.owl-wrapper-outer{
 	text-shadow: 0 1px 0 #FFF;
     background-color: transparent;
 }
+#ocfilter .list-group .list-group-item{
+    background-color: #fdf3d6;
+}
+#ocfilter .list-group a{
+    line-height: 1.2;
+    color: #797569;
+}
+#ocfilter .popover{
+    border-radius: 0;
+}
+#ocfilter .popover-title{
+    background-color: #fdf3d6;
+    border-radius: 0;
+}
+#ocfilter,
+#ocfilter .panel-heading{
+    border-color:#f0d4aa;;
+}
+
+#ocfilter .panel-heading{
+    border-radius: 0;
+    background-color: #e56502;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: none;
+}
+#ocfilter .noUi-connect{
+    background:#6ea500;
+}
 .list-group {
     border: none;
     box-sizing: border-box;
