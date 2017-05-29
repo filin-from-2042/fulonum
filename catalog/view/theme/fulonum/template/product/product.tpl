@@ -13,7 +13,11 @@
         <?php } ?>
 
         <div id="content" class="<?php echo $class; ?> product-info"><?php echo $content_top; ?>
-
+        <ul class="breadcrumb">
+            <?php foreach ($breadcrumbs as $breadcrumb) { ?>
+            <li><a href="<?php echo $breadcrumb['href']; ?>"><?php echo $breadcrumb['text']; ?></a></li>
+            <?php } ?>
+        </ul>
             <div class="row">
                 <div class="col-sm-6">
 
