@@ -5418,83 +5418,211 @@ class ModelToolExportImport extends Model {
 	}
 
 
-	public function upload( $filename, $incremental=false ) {
-		// we use our own error handler
-		global $registry;
-		$registry = $this->registry;
-		set_error_handler('error_handler_for_export_import',E_ALL);
-		register_shutdown_function('fatal_error_shutdown_handler_for_export_import');
+    public function upload( $filename, $incremental=false ) {
+        // we use our own error handler
+        global $registry;
+        $registry = $this->registry;
+        set_error_handler('error_handler_for_export_import',E_ALL);
+        register_shutdown_function('fatal_error_shutdown_handler_for_export_import');
 
-		try {
-			$this->session->data['export_import_nochange'] = 1;
+        try {
+            $this->session->data['export_import_nochange'] = 1;
 
-			// we use the PHPExcel package from http://phpexcel.codeplex.com/
-			$cwd = getcwd();
-			chdir( DIR_SYSTEM.'PHPExcel' );
-			require_once( 'Classes/PHPExcel.php' );
-			chdir( $cwd );
+            // we use the PHPExcel package from http://phpexcel.codeplex.com/
+            $cwd = getcwd();
+            chdir( DIR_SYSTEM.'PHPExcel' );
+            require_once( 'Classes/PHPExcel.php' );
+            chdir( $cwd );
 
-			// Memory Optimization
-			if ($this->config->get( 'export_import_settings_use_import_cache' )) {
-				$cacheMethod = PHPExcel_CachedObjectStorageFactory::cache_to_phpTemp;
-				$cacheSettings = array( ' memoryCacheSize '  => '16MB'  );
-				PHPExcel_Settings::setCacheStorageMethod($cacheMethod, $cacheSettings);
-			}
+            // Memory Optimization
+            if ($this->config->get( 'export_import_settings_use_import_cache' )) {
+                $cacheMethod = PHPExcel_CachedObjectStorageFactory::cache_to_phpTemp;
+                $cacheSettings = array( ' memoryCacheSize '  => '16MB'  );
+                PHPExcel_Settings::setCacheStorageMethod($cacheMethod, $cacheSettings);
+            }
 
-			// parse uploaded spreadsheet file
-			$inputFileType = PHPExcel_IOFactory::identify($filename);
-			$objReader = PHPExcel_IOFactory::createReader($inputFileType);
-			$objReader->setReadDataOnly(true);
-			$reader = $objReader->load($filename);
+            // parse uploaded spreadsheet file
+            $inputFileType = PHPExcel_IOFactory::identify($filename);
+            $objReader = PHPExcel_IOFactory::createReader($inputFileType);
+            $objReader->setReadDataOnly(true);
+            $reader = $objReader->load($filename);
+            if($reader->getSheetCount() > 1)
+            {
+                // read the various worksheets and load them to the database
+                if (!$this->validateIncrementalOnly( $reader, $incremental )) {
+                    return false;
+                }
+                if (!$this->validateUpload( $reader )) {
+                    return false;
+                }
+                $this->clearCache();
+                $this->session->data['export_import_nochange'] = 0;
+                $available_product_ids = array();
 
-			// read the various worksheets and load them to the database
-			if (!$this->validateIncrementalOnly( $reader, $incremental )) {
-				return false;
-			}
-			if (!$this->validateUpload( $reader )) {
-				return false;
-			}
-			$this->clearCache();
-			$this->session->data['export_import_nochange'] = 0;
-			$available_product_ids = array();
-			$available_category_ids = array();
-			$available_customer_ids = array();
-			$this->uploadCategories( $reader, $incremental, $available_category_ids );
-			$this->uploadCategoryFilters( $reader, $incremental, $available_category_ids );
-			$this->uploadProducts( $reader, $incremental, $available_product_ids );
-			$this->uploadAdditionalImages( $reader, $incremental, $available_product_ids );
-			$this->uploadSpecials( $reader, $incremental, $available_product_ids );
-			$this->uploadDiscounts( $reader, $incremental, $available_product_ids );
-			$this->uploadRewards( $reader, $incremental, $available_product_ids );
-			$this->uploadProductOptions( $reader, $incremental, $available_product_ids );
-			$this->uploadProductOptionValues( $reader, $incremental, $available_product_ids );
-			$this->uploadProductAttributes( $reader, $incremental, $available_product_ids );
-			$this->uploadProductFilters( $reader, $incremental, $available_product_ids );
-			$this->uploadOptions( $reader, $incremental );
-			$this->uploadOptionValues( $reader, $incremental );
-			$this->uploadAttributeGroups( $reader, $incremental );
-			$this->uploadAttributes( $reader, $incremental );
-			$this->uploadFilterGroups( $reader, $incremental );
-			$this->uploadFilters( $reader, $incremental );
-			$this->uploadCustomers( $reader, $incremental, $available_customer_ids );
-			$this->uploadAddresses( $reader, $incremental, $available_customer_ids );
-			return true;
-		} catch (Exception $e) {
-			$errstr = $e->getMessage();
-			$errline = $e->getLine();
-			$errfile = $e->getFile();
-			$errno = $e->getCode();
-			$this->session->data['export_import_error'] = array( 'errstr'=>$errstr, 'errno'=>$errno, 'errfile'=>$errfile, 'errline'=>$errline );
-			if ($this->config->get('config_error_log')) {
-				$this->log->write('PHP ' . get_class($e) . ':  ' . $errstr . ' in ' . $errfile . ' on line ' . $errline);
-			}
-			return false;
-		}
-	}
+                $available_category_ids = array();
+                $available_customer_ids = array();
+
+                $this->uploadCategories( $reader, $incremental, $available_category_ids );
+                $this->uploadCategoryFilters( $reader, $incremental, $available_category_ids );
+
+                $this->uploadProducts( $reader, $incremental, $available_product_ids );
+
+                $this->uploadAdditionalImages( $reader, $incremental, $available_product_ids );
+                $this->uploadSpecials( $reader, $incremental, $available_product_ids );
+                $this->uploadDiscounts( $reader, $incremental, $available_product_ids );
+                $this->uploadRewards( $reader, $incremental, $available_product_ids );
+                $this->uploadProductOptions( $reader, $incremental, $available_product_ids );
+                $this->uploadProductOptionValues( $reader, $incremental, $available_product_ids );
+                $this->uploadProductAttributes( $reader, $incremental, $available_product_ids );
+                $this->uploadProductFilters( $reader, $incremental, $available_product_ids );
+                $this->uploadOptions( $reader, $incremental );
+                $this->uploadOptionValues( $reader, $incremental );
+                $this->uploadAttributeGroups( $reader, $incremental );
+                $this->uploadAttributes( $reader, $incremental );
+                $this->uploadFilterGroups( $reader, $incremental );
+                $this->uploadFilters( $reader, $incremental );
+                $this->uploadCustomers( $reader, $incremental, $available_customer_ids );
+                $this->uploadAddresses( $reader, $incremental, $available_customer_ids );
+
+                return true;
+            }
+            else if($reader->getSheetCount() == 1)
+            {
+                return $this->uploadPriceProducts( $reader );
+            }
+            else return false;
+        } catch (Exception $e) {
+            $errstr = $e->getMessage();
+            $errline = $e->getLine();
+            $errfile = $e->getFile();
+            $errno = $e->getCode();
+            $this->session->data['export_import_error'] = array( 'errstr'=>$errstr, 'errno'=>$errno, 'errfile'=>$errfile, 'errline'=>$errline );
+            if ($this->config->get('config_error_log')) {
+                $this->log->write('PHP ' . get_class($e) . ':  ' . $errstr . ' in ' . $errfile . ' on line ' . $errline);
+            }
+            return false;
+        }
+    }
+
+    protected function detect_encoding( $str ) {
+        // auto detect the character encoding of a string
+        return mb_detect_encoding( $str, 'UTF-8,ISO-8859-15,ISO-8859-1,cp1251,KOI8-R' );
+    }
+
+    function uploadPriceProducts(&$reader)
+    {
+        $data = $reader->getSheet(0);
+        $isFirstRow = TRUE;
+        $endRow = $data->getHighestRow();
+        for ($startRow=0; $startRow<$endRow; $startRow +=1)
+        {
+            if ($isFirstRow) {
+                $isFirstRow = FALSE;
+                continue;
+            }
+
+            $product_name = trim($this->getCell($data,$startRow,3));
+            $product_name = htmlentities( $product_name, ENT_QUOTES, $this->detect_encoding($product_name) );
+            $price = trim($this->getCell($data,$startRow,4));
+            $product_model = trim($this->getCell($data, $startRow, 2));
+
+            $this->load->model( 'catalog/product' );
+
+            $sqlProducts = "SELECT product_id
+                    FROM " . DB_PREFIX . "product
+                    WHERE TRIM(model) = '".$product_model."'";
+            $queryProducts = $this->db->query($sqlProducts);
+
+            $query = $this->db->query("SELECT language_id as langID FROM " . DB_PREFIX . "language WHERE code = (SELECT value FROM " . DB_PREFIX . "setting as os WHERE os.key=\"config_language\")");
+            $currLangID =  (int)$query->row['langID'];
+
+            if(!$queryProducts->num_rows)
+            {
+                $categoryName = trim($this->getCell($data, $startRow, 1));
+                $sqlCategories = "SELECT C.category_id as category_id
+                        FROM " . DB_PREFIX . "category AS C
+                        INNER JOIN " . DB_PREFIX . "category_description CD ON C.category_id = CD.category_id
+                        WHERE TRIM(CD.name) = '".$categoryName."'";
+                $queryCategories = $this->db->query($sqlCategories);
+
+                if(!$queryCategories->num_rows)
+                {
+                    $this->load->model( 'catalog/category' );
+                    $categoryData = array();
+                    $categoryData["parent_id"] = 0;
+                    $categoryData["column"] = 1;
+                    $categoryData["sort_order"] = 0;
+                    $categoryData["status"] = 1;
+                    $categoryData["category_store"] = array(0);
+                    $categoryData["keyword"] = '';
+                    $categoryData["category_description"] = array( $currLangID => array('name'=>$categoryName, 'meta_title'=>$categoryName, 'meta_keyword'=>'', 'meta_description'=>'','description'=>'','tag'=>'') );
+                    $this->model_catalog_category->addCategory($categoryData);
+
+                    $queryCategories = $this->db->query($sqlCategories);
+                    $category_id = $queryCategories->row['category_id'];
+                }
+                else $category_id = $queryCategories->row['category_id'];
+
+                $productData = array();
+
+                $product['meta_descriptions'] = '';
+                $product['meta_titles'] = '';
+                $product['meta_descriptions'] = '';
+
+                $productData["model"] = $product_model;
+                $productData["sku"] = '';
+                $productData["upc"] = '';
+                $productData["ean"] = '';
+                $productData["jan"] = '';
+                $productData["isbn"] = '';
+                $productData["mpn"] = '';
+                $productData["location"] = '';
+                $productData["quantity"] = 1;
+                $productData["minimum"] = 1;
+                $productData["subtract"] = 1;
+                $productData["stock_status_id"] = 5;
+
+                $today = getdate();
+                $productData["date_available"] = $today["year"] . '-' . $today["mon"] . '-' . $today["mday"];
+
+                $productData["manufacturer_id"] = 0;
+                $productData["shipping"] = 1;
+                $productData["price"] = $price;
+                $productData["points"] = 0;
+                $productData["weight"] = 0.00;
+                $productData["weight_class_id"] = 1;
+                $productData["length"] = 0.00;
+                $productData["width"] = 0.00;
+                $productData["height"] = 0.00;
+                $productData["length_class_id"] = 1;
+                $productData["status"] = 1;
+                $productData["tax_class_id"] = 0;
+                $productData["sort_order"] = 1;
+                $productData["keyword"] = '';
+
+                $productData["product_category"] = array($category_id);
+                $productData["product_store"] = array(0);
 
 
+                $productData["product_description"] = array( $currLangID => array('name'=>$product_name, 'meta_keyword'=>'', 'meta_description'=>'', 'meta_title'=>$product_name, 'description'=>'','tag'=>'') );
 
-	protected function getStoreIdsForCategories() {
+                $this->model_catalog_product->addProduct($productData);
+            }
+            else
+            {
+                $productData =  $this->model_catalog_product->getProduct($queryProducts->row['product_id']);
+                if( count($productData) > 0)
+                {
+                    $productData["price"] = $price;
+                    $this->db->query("UPDATE " . DB_PREFIX . "product SET price = '" . (float)$price . "',
+                          date_modified = NOW() WHERE product_id = '" . (int)$queryProducts->row['product_id'] . "'");
+                }
+            }
+        }
+        return TRUE;
+    }
+
+    protected function getStoreIdsForCategories() {
 		$sql =  "SELECT category_id, store_id FROM `".DB_PREFIX."category_to_store` cs;";
 		$store_ids = array();
 		$result = $this->db->query( $sql );
