@@ -5526,6 +5526,10 @@ class ModelToolExportImport extends Model {
             $price = trim($this->getCell($data,$startRow,4));
             $product_model = trim($this->getCell($data, $startRow, 2));
 
+            // current language
+            $query = $this->db->query("SELECT language_id as langID FROM " . DB_PREFIX . "language WHERE code = (SELECT value FROM " . DB_PREFIX . "setting as os WHERE os.key=\"config_language\")");
+            $currLangID =  (int)$query->row['langID'];
+
             $this->load->model( 'catalog/product' );
 
             $sqlProducts = "SELECT product_id
@@ -5533,11 +5537,9 @@ class ModelToolExportImport extends Model {
                     WHERE TRIM(model) = '".$product_model."'";
             $queryProducts = $this->db->query($sqlProducts);
 
-            $query = $this->db->query("SELECT language_id as langID FROM " . DB_PREFIX . "language WHERE code = (SELECT value FROM " . DB_PREFIX . "setting as os WHERE os.key=\"config_language\")");
-            $currLangID =  (int)$query->row['langID'];
-
             if(!$queryProducts->num_rows)
             {
+                // category data
                 $categoryName = trim($this->getCell($data, $startRow, 1));
                 $sqlCategories = "SELECT C.category_id as category_id
                         FROM " . DB_PREFIX . "category AS C
@@ -5563,6 +5565,31 @@ class ModelToolExportImport extends Model {
                 }
                 else $category_id = $queryCategories->row['category_id'];
 
+                // manufacturer data
+                $manufacturer_name = trim($this->getCell($data,$startRow,5));
+                $manufacturer_id = 0;
+                if(!is_null($manufacturer_name) && !empty($manufacturer_name))
+                {
+                    $sqlManufacturers = "SELECT manufacturer_id
+                            FROM " . DB_PREFIX . "manufacturer AS C
+                            WHERE name LIKE '" . $this->db->escape($manufacturer_name) . "%'";
+                    $queryManufacturers = $this->db->query($sqlManufacturers);
+                    if(!$queryManufacturers->num_rows)
+                    {
+                        $this->load->model( 'catalog/manufacturer' );
+                        $manufacturerData = array();
+                        $manufacturerData['name'] = $manufacturer_name;
+                        $manufacturerData['sort_order'] = 0;
+                        $manufacturerData['manufacturer_store'] = array(0);
+                        $manufacturerData['keyword'] = strtolower($manufacturer_name);
+
+                        $this->model_catalog_manufacturer->addManufacturer($manufacturerData);
+                        $queryManufacturers = $this->db->query($sqlManufacturers);
+                        $manufacturer_id = $queryManufacturers->row['manufacturer_id'];
+                    }
+                    else $manufacturer_id = $queryManufacturers->row['manufacturer_id'];
+                }
+
                 $productData = array();
 
                 $product['meta_descriptions'] = '';
@@ -5585,7 +5612,7 @@ class ModelToolExportImport extends Model {
                 $today = getdate();
                 $productData["date_available"] = $today["year"] . '-' . $today["mon"] . '-' . $today["mday"];
 
-                $productData["manufacturer_id"] = 0;
+                $productData["manufacturer_id"] = $manufacturer_id;
                 $productData["shipping"] = 1;
                 $productData["price"] = $price;
                 $productData["points"] = 0;
