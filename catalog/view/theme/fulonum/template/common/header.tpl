@@ -60,7 +60,7 @@
             </a>
         </li>
         <li>
-            <a href="<?php echo $contact; ?>" title="<?php echo $text_contacts ?>">
+            <a href="<?php echo $contact_page; ?>" title="<?php echo $text_contacts ?>">
                 <span class="hidden-lg"><i class="fa fa-phone"></i></span>
                 <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_contacts; ?></span>
             </a>

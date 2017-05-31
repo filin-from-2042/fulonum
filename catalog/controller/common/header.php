@@ -72,6 +72,8 @@ class ControllerCommonHeader extends Controller {
 		$data['text_contacts'] = $this->language->get('text_contacts');
 		$data['text_search'] = $this->language->get('text_search');
 
+
+        $data['contact_page'] = $this->url->link('information/information', 'information_id=3');
 		$data['home'] = $this->url->link('common/home');
 		$data['wishlist'] = $this->url->link('account/wishlist', '', true);
 		$data['logged'] = $this->customer->isLogged();
