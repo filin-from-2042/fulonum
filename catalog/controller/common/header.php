@@ -74,6 +74,8 @@ class ControllerCommonHeader extends Controller {
 
 
         $data['contact_page'] = $this->url->link('information/information', 'information_id=3');
+        $data['shipping_page'] = $this->url->link('information/information', 'information_id=6');
+        $data['payment_page'] = $this->url->link('information/information', 'information_id=5');
 		$data['home'] = $this->url->link('common/home');
 		$data['wishlist'] = $this->url->link('account/wishlist', '', true);
 		$data['logged'] = $this->customer->isLogged();

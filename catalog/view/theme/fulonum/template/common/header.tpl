@@ -72,15 +72,15 @@
             </a>
         </li>
         <li>
-            <a href="<?php echo $shopping_cart; ?>" title="<?php echo $text_shopping_cart; ?>">
+            <a href="<?php echo $shipping_page; ?>" title="Доставка и самовывоз">
                 <span class="hidden-lg"><i class="fa fa-shopping-cart"></i></span>
-                <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_shopping_cart; ?></span>
+                <span class="hidden-xs hidden-sm hidden-md">Доставка и самовывоз</span>
             </a>
         </li>
         <li>
-            <a href="<?php echo $checkout; ?>" title="<?php echo $text_checkout; ?>">
-                <span class="hidden-lg"><i class="fa fa-share"></i></span>
-                <span class="hidden-xs hidden-sm hidden-md"><?php echo $text_checkout; ?></span>
+            <a href="<?php echo payment_page; ?>" title="Варианты оплаты">
+                <span class="hidden-lg"><i class="fa fa-money"></i></span>
+                <span class="hidden-xs hidden-sm hidden-md">Варианты оплаты</span>
             </a>
         </li>
           <?php if ($logged) { ?>
