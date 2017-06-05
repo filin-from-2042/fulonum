@@ -821,7 +821,8 @@ div.owl-wrapper-outer{
 .product-thumb h4{
     margin-top: 0;
     margin-bottom: 22px;
-    max-height: 16px;
+    /*max-height: 16px;*/
+    height: 78px;
 }
 .product-thumb .image {
 	text-align: center;
