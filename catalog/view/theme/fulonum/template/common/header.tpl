@@ -78,7 +78,7 @@
             </a>
         </li>
         <li>
-            <a href="<?php echo payment_page; ?>" title="Варианты оплаты">
+            <a href="<?php echo $payment_page; ?>" title="Варианты оплаты">
                 <span class="hidden-lg"><i class="fa fa-money"></i></span>
                 <span class="hidden-xs hidden-sm hidden-md">Варианты оплаты</span>
             </a>
