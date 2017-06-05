@@ -5613,7 +5613,7 @@ class ModelToolExportImport extends Model {
                 $productData["date_available"] = $today["year"] . '-' . $today["mon"] . '-' . $today["mday"];
 
                 $productData["manufacturer_id"] = $manufacturer_id;
-                $productData["shipping"] = 1;
+                $productData["shipping"] = 0;
                 $productData["price"] = $price;
                 $productData["points"] = 0;
                 $productData["weight"] = 0.00;
