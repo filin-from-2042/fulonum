@@ -69,6 +69,20 @@ class ControllerCommonColumnLeft extends Controller {
 			}
 		}
 
+        if ($route == 'common/home')
+        {
+            // manufacturers list
+            $this->load->model('catalog/manufacturer');
+            $results = $this->model_catalog_manufacturer->getManufacturers();
+            $data['manufacturersList'] = array();
+            foreach ($results as $result) {
+                $data['manufacturersList'][] = array(
+                    'name' => $result['name'],
+                    'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $result['manufacturer_id'])
+                );
+            }
+            $data['manufacturersList_link'] = $this->url->link('product/manufacturer');
+        }
 		return $this->load->view('common/column_left', $data);
 	}
 }
