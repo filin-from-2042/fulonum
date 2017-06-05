@@ -48,7 +48,6 @@
                         <?php if ($reward) { ?>
                         <li><?php echo $text_reward; ?> <span class="prop-value"><?php echo $reward; ?></span></li>
                         <?php } ?>
-                        <li><?php echo $text_stock; ?> <span class="prop-value in-stock"><?php echo $stock; ?></span></li>
                     </ul>
                     <?php if ($price) { ?>
                     <ul class="list-unstyled">
