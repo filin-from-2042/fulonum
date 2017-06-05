@@ -164,9 +164,10 @@ div.required .control-label:before {
 }
 .subcategory-list li .name.subcatname {
     padding-top: 4px;
-    height: 42px;
+    height: 100px;
     overflow: hidden;
-    margin-bottom: 23px;
+    margin-bottom: 0px;
+    /*margin-bottom: 23px;*/
 
 }
 .subcategory-list li .name.subcatname a{
