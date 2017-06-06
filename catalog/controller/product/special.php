@@ -28,7 +28,8 @@ class ControllerProductSpecial extends Controller {
 		if (isset($this->request->get['limit'])) {
 			$limit = (int)$this->request->get['limit'];
 		} else {
-			$limit = $this->config->get($this->config->get('config_theme') . '_product_limit');
+//			$limit = (int)$this->config->get($this->config->get('config_theme') . '_product_limit');
+            $limit = 30;
 		}
 
 		$this->document->setTitle($this->language->get('heading_title'));
@@ -219,7 +220,8 @@ class ControllerProductSpecial extends Controller {
 
 		$data['limits'] = array();
 
-		$limits = array_unique(array($this->config->get($this->config->get('config_theme') . '_product_limit'), 25, 50, 75, 100));
+//			$limits = array_unique(array($this->config->get($this->config->get('config_theme') . '_product_limit'), 25, 50, 75, 100));
+        $limits = array_unique(array(30,60,90));
 
 		sort($limits);
 
