@@ -11,8 +11,21 @@ class ControllerProductProduct extends Controller {
 			'text' => $this->language->get('text_home'),
 			'href' => $this->url->link('common/home')
 		);
+        $data['breadcrumbs'][] = array(
+            'text' => 'Каталог',
+            'href' => $this->url->link('product/category')
+        );
+
+        if (isset($this->request->get['product_id'])) {
+            $product_id = (int)$this->request->get['product_id'];
+        } else {
+            $product_id = 0;
+        }
 
 		$this->load->model('catalog/category');
+
+//        if(!isset($this->request->get['path'])) $this->request->get['path'] = $this->getProductCategories($product_id);
+        $this->request->get['path'] = $this->getProductCategories($product_id);
 
 		if (isset($this->request->get['path'])) {
 			$path = '';
@@ -66,6 +79,8 @@ class ControllerProductProduct extends Controller {
 				);
 			}
 		}
+
+
 
 		$this->load->model('catalog/manufacturer');
 
@@ -148,11 +163,6 @@ class ControllerProductProduct extends Controller {
 			);
 		}
 
-		if (isset($this->request->get['product_id'])) {
-			$product_id = (int)$this->request->get['product_id'];
-		} else {
-			$product_id = 0;
-		}
 
 		$this->load->model('catalog/product');
 
@@ -695,4 +705,29 @@ class ControllerProductProduct extends Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+    // метод возвращает категории товара в формате id_id_id
+    public function getProductCategories($product_id)
+    {
+         $path="";
+         $query = $this->db->query("SELECT category_id FROM " . DB_PREFIX . "product_to_category WHERE product_id = ".$product_id."  LIMIT 1");
+         if($query->num_rows)
+         {
+             $path .= $query->row["category_id"];
+             $prodCat = $query->row["category_id"];
+
+             while(true)
+             {
+                 $query = $this->db->query("SELECT `parent_id` FROM " . DB_PREFIX . "category WHERE category_id=".$prodCat);
+                 if($query->num_rows && $query->row["parent_id"]!=0)
+                 {
+                     $path=$query->row["parent_id"]."_".$path;
+                     $prodCat = $query->row["parent_id"];
+                }
+                else break;
+             }
+
+         }
+         return $path;
+    }
 }
