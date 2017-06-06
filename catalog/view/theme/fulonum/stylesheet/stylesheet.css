@@ -258,7 +258,7 @@ div.required .control-label:before {
 	line-height: 20px;
 	padding: 0 10px;
     border-radius: 0;
-    max-width: 182px;
+    max-width: 256px;
     float: right;
 }
 #search .btn-lg {
@@ -985,6 +985,9 @@ h2.price {
     overflow: hidden;
 }
 
+.product-thumb h4+p{
+    min-height: 40px;
+}
 .manufacturers-list a{
     color: #323232;
     cursor: pointer;

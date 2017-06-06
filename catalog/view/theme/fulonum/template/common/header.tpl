@@ -111,7 +111,7 @@
 <header>
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-3">
         <div id="logo">
           <?php if ($logo) { ?>
           <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
@@ -121,7 +121,7 @@
         </div>
       </div>
       <div class="col-sm-3"><?php echo $cart; ?></div>
-      <div class="col-sm-3"><?php echo $search; ?>
+      <div class="col-sm-6"><?php echo $search; ?>
       </div>
     </div>
   </div>
