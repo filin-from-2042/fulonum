@@ -85,10 +85,11 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/manufacturer');
 
 		if (isset($this->request->get['manufacturer_id'])) {
+            /*
 			$data['breadcrumbs'][] = array(
 				'text' => $this->language->get('text_brand'),
 				'href' => $this->url->link('product/manufacturer')
-			);
+			);*/
 
 			$url = '';
 
@@ -111,10 +112,11 @@ class ControllerProductProduct extends Controller {
 			$manufacturer_info = $this->model_catalog_manufacturer->getManufacturer($this->request->get['manufacturer_id']);
 
 			if ($manufacturer_info) {
+                /*
 				$data['breadcrumbs'][] = array(
 					'text' => $manufacturer_info['name'],
 					'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $this->request->get['manufacturer_id'] . $url)
-				);
+				);*/
 			}
 		}
 
@@ -157,10 +159,10 @@ class ControllerProductProduct extends Controller {
 				$url .= '&limit=' . $this->request->get['limit'];
 			}
 
-			$data['breadcrumbs'][] = array(
-				'text' => $this->language->get('text_search'),
-				'href' => $this->url->link('product/search', $url)
-			);
+//			$data['breadcrumbs'][] = array(
+//				'text' => $this->language->get('text_search'),
+//				'href' => $this->url->link('product/search', $url)
+//			);
 		}
 
 
