@@ -78,7 +78,7 @@ class ControllerCommonColumnLeft extends Controller {
             foreach ($results as $result) {
                 $data['manufacturersList'][] = array(
                     'name' => $result['name'],
-                    'href' => $this->url->link('product/manufacturer/info', 'manufacturer_id=' . $result['manufacturer_id'])
+                    'href' => $this->url->link('product/manufacturer/catalog', 'manufacturer_id=' . $result['manufacturer_id'])
                 );
             }
             $data['manufacturersList_link'] = $this->url->link('product/manufacturer');
